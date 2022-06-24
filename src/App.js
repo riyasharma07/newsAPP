@@ -3,8 +3,9 @@ import { Typography } from '@material-ui/core';
 import wordsToNumbers from 'words-to-numbers';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
-import logo from './images/logo.png';
+import {logo} from './images/logo.png';
 import { NewsCards, Modal } from './components';
+import img from './images/preview.jpg';
 import useStyles from './styles';
 
 const App = () => {
@@ -51,7 +52,7 @@ const App = () => {
             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
           </div>
         ) : null}
-        <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="logo" />
+        <img src={img} className={classes.alanLogo} alt="logo" />
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
       <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -59,7 +60,7 @@ const App = () => {
         <div className={classes.footer}>
           <Typography variant="body1" component="h2">
             Created by
-            <a className={classes.link} href="https://www.linkedin.com/in/vishal-gautam-1b9840206/"> Vishal Gautam</a>          </Typography>
+            <a className={classes.link} href="https://www.linkedin.com/in/riya-sharma-2a2a48186/"> Riya Sharma</a>          </Typography>
         </div>
       ) : null}
     </div>
